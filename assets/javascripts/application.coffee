@@ -12,7 +12,7 @@ angular.module("LiquorCrmWeb", ["LiquorCrmWeb.filters", "LiquorCrmWeb.services",
     templateUrl: "partials/stores"
     controller: "StoresCtrl"
 
-  $routeProvider.when "/stores/:id",
+  $routeProvider.when "/stores/:storeId",
     templateUrl: "partials/store"
     controller: "StoreCtrl"
 
@@ -20,7 +20,7 @@ angular.module("LiquorCrmWeb", ["LiquorCrmWeb.filters", "LiquorCrmWeb.services",
     templateUrl: "partials/products"
     controller: "ProductsCtrl"
 
-  $routeProvider.when "/products/:id",
+  $routeProvider.when "/products/:productId",
     templateUrl: "partials/product"
     controller: "ProductCtrl"
 

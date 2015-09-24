@@ -5,14 +5,18 @@ angular.module("LiquorCrmWeb.controllers", [])
   console.log "StoresCtrl"
 ])
 
-.controller("StoreCtrl", [->
+.controller("StoreCtrl", ["$scope", "$routeParams", ($scope, $routeParams) ->
   console.log "StoreCtrl"
+  $scope.store = {}
+  $scope.store.id = $routeParams.storeId
 ])
 
 .controller("ProductsCtrl", [->
   console.log "ProductsCtrl"
 ])
 
-.controller("ProductCtrl", [->
+.controller("ProductCtrl", ["$scope", "$routeParams", ($scope, $routeParams) ->
   console.log "ProductCtrl"
+  $scope.product = {}
+  $scope.product.id = $routeParams.productId
 ])
