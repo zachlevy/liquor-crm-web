@@ -1,0 +1,10 @@
+.DS_Store
+
+# Ignore bundler config
+/.bundle
+
+# Ignore Sass' cache
+/.sass-cache
+
+# Ignore compiled assets
+public/assets
