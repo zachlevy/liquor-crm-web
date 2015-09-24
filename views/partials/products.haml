@@ -1,1 +1,18 @@
-%h1 products list.
+.row
+  .col-xs-12
+    %h1 Products
+.row
+  .col-xs-12
+    %table.table.table-striped
+      %thead
+        %th Number
+        %th Name
+        %th Case Size
+        %th View
+      %tbody
+        %tr{ "ng-repeat" => "product in products" }
+          %td {{ product.number }}
+          %td {{ product.name }}
+          %td {{ product.case_size }}
+          %td
+            %a.btn.btn-primary{:href => "#/products/{{ product.id }}"} View
