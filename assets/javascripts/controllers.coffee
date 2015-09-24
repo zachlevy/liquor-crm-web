@@ -1,7 +1,8 @@
 # Controllers
 
 angular.module("LiquorCrmWeb.controllers", [])
-.controller("StoresCtrl", ["$scope", "$routeParams","appApi", ($scope, $routeParams, appApi)->
+
+.controller("StoresCtrl", ["$scope", "$routeParams", "appApi", ($scope, $routeParams, appApi)->
   console.log "StoresCtrl"
   appApi.get("stores").then((result) ->
     $scope.stores = result
@@ -10,10 +11,13 @@ angular.module("LiquorCrmWeb.controllers", [])
   )
 ])
 
-.controller("StoreCtrl", ["$scope", "$routeParams", ($scope, $routeParams) ->
+.controller("StoreCtrl", ["$scope", "$routeParams", "appApi", ($scope, $routeParams, appApi) ->
   console.log "StoreCtrl"
-  $scope.store = {}
-  $scope.store.id = $routeParams.storeId
+  appApi.get("stores/#{$routeParams.storeId}").then((result) ->
+    $scope.store = result
+    console.log '$scope.store'
+    console.log $scope.store
+  )
 ])
 
 .controller("ProductsCtrl", [->

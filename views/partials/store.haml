@@ -1,35 +1,24 @@
 .row
   .col-xs-12
     %h1
-      Store #21
-      %small North
+      Store # {{ store.number }}
 .row
   .col-xs-12.col-sm-4
     %label Store Name
-    %p Golf Links &amp; Hwy 403
+    %p {{ store.name }}
     %label Store class
-    %p AA
+    %p {{ store.store_class_id }}
     %label Address
-    %p 737 Golf Links Road, Meadowlands Centre
+    %p {{ store.address }}
     %label City
-    %p Ancaster
+    %p {{ store.city }}
     %label Postal code
-    %p L9K1L5
-    %label Description:
-    %p None
+    %p {{ store.postal_code }}
   .col-xs-12.col-sm-4
     %h4 Contact Info
     %label Phone
     %p
-      %a{:href => "tel:905-304-9608"} (905) 304-9608
-    %label Sales rep name
-    %p None
-    %label Manager name
-    %p Blair Kemp
-    %label Manager email
-    %p
-      %a{:href => "mailto:blair.kemp@lcbo.com"} blair.kemp@lcbo.com
-    %p
+      %a{:href => "tel:{{ store.phone }}"} {{ store.phone }}
 %hr
 .row
   .col-xs-12
