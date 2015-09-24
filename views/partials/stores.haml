@@ -11,9 +11,10 @@
         %th City
         %th View
       %tbody
-        %tr
-          %td 1
-          %td AAA
-          %td 2625D Weston Road
-          %td North York
-          %td View
+        %tr{ "ng-repeat" => "store in stores" }
+          %td {{ store.number }}
+          %td {{ store.store_class_id }}
+          %td {{ store.address }}
+          %td {{ store.city }}
+          %td
+            %a.btn.btn-primary{:href => "/stores/{{ store.id }}"} View
