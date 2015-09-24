@@ -1,5 +1,18 @@
 # Controllers
 
-angular.module("myApp.controllers", []).controller("MyCtrl1", [->
-  ]).controller "MyCtrl2", [->
-]
+angular.module("LiquorCrmWeb.controllers", [])
+.controller("StoresCtrl", [->
+  console.log "StoresCtrl"
+])
+
+.controller("StoreCtrl", [->
+  console.log "StoreCtrl"
+])
+
+.controller("ProductsCtrl", [->
+  console.log "ProductsCtrl"
+])
+
+.controller("ProductCtrl", [->
+  console.log "ProductCtrl"
+])

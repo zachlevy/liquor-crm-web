@@ -6,14 +6,23 @@
 "use strict"
 
 # Declare app level module which depends on filters, and services
-angular.module("myApp", ["myApp.filters", "myApp.services", "myApp.directives", "myApp.controllers", "ngRoute"]).config ["$routeProvider", ($routeProvider) ->
-  $routeProvider.when "/view1",
-    templateUrl: "partials/partial1"
-    controller: "MyCtrl1"
+angular.module("LiquorCrmWeb", ["LiquorCrmWeb.filters", "LiquorCrmWeb.services", "LiquorCrmWeb.directives", "LiquorCrmWeb.controllers", "ngRoute"]).config ["$routeProvider", ($routeProvider) ->
 
-  $routeProvider.when "/view2",
-    templateUrl: "partials/partial2"
-    controller: "MyCtrl2"
+  $routeProvider.when "/stores",
+    templateUrl: "partials/stores"
+    controller: "StoresCtrl"
 
-  $routeProvider.otherwise redirectTo: "/view1"
+  $routeProvider.when "/stores/{store_id}",
+    templateUrl: "partials/store"
+    controller: "StoreCtrl"
+
+  $routeProvider.when "/products",
+    templateUrl: "partials/products"
+    controller: "ProductsCtrl"
+
+  $routeProvider.when "/products/{product_id}",
+    templateUrl: "partials/product"
+    controller: "ProductCtrl"
+
+  $routeProvider.otherwise redirectTo: "/stores"
 ]

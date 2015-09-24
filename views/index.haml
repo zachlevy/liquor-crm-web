@@ -1,5 +1,5 @@
 !!! 5
-%html{ :lang => "en", "ng-app" => "myApp" }
+%html{ :lang => "en", "ng-app" => "LiquorCrmWeb" }
   %head
     %meta{ :charset => "utf-8" }
     %meta{ :content => "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no", :name => "viewport" }
@@ -10,9 +10,13 @@
       %h1 AngularJS Seed
       %ul.nav.nav-pills
         %li
-          %a{ :href => "#/view1" } View 1
+          %a{ :href => "#/stores" } Stores
         %li
-          %a{ :href => "#/view2" } View 2
+          %a{ :href => "#/stores/1" } Store
+        %li
+          %a{ :href => "#/products" } Products
+        %li
+          %a{ :href => "#/products/1" } Product
       %hr/
       %div{ "ng-view" => "" }
       %div
