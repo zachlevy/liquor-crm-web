@@ -1,1 +1,42 @@
-%h1 product {{ product.id }}.
+.row
+  .col-xs-12
+    %h1
+      Sage Cranberry Elderflower
+      %small 426973
+.row.text-center
+  .col-xs-6.col-sm-2
+    %h4 YTD Sales
+    %h1 3089
+  .col-xs-6.col-sm-3
+    %h4 Current Inventory
+    %h1 1464
+  .col-xs-6.col-sm-2
+    %h4 YTD Shipments
+    %h1 1752
+  .col-xs-6.col-sm-2
+    %h4 Stores
+    %h1 125
+  .col-xs-6.col-sm-3
+    %h4 Last Updated
+    %h1 2015-09-18
+%hr
+.row
+  .col-xs-12
+    %h3 Sales by Day
+    %p.help-block Daily growth ex: Tuesday / Last Tuesday
+  .col-xs-12
+    %table.table.table-striped
+      %thead
+        %tr
+          %th Days Ago
+          %th Date
+          %th Sales (units)
+          %th Shipment (units)
+          %th Growth
+      %tbody
+        %tr
+          %td 0
+          %td 2015-09-18 00:00:00 UTC
+          %td 343
+          %td 192
+          %td +122.73%
