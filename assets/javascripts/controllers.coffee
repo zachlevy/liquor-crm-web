@@ -29,8 +29,11 @@ angular.module("LiquorCrmWeb.controllers", [])
   )
 ])
 
-.controller("ProductCtrl", ["$scope", "$routeParams", ($scope, $routeParams) ->
+.controller("ProductCtrl", ["$scope", "$routeParams", "appApi", ($scope, $routeParams, appApi) ->
   console.log "ProductCtrl"
-  $scope.product = {}
-  $scope.product.id = $routeParams.productId
+  appApi.get("products/#{$routeParams.productId}").then((result) ->
+    $scope.product = result
+    console.log '$scope.product'
+    console.log $scope.product
+  )
 ])
