@@ -34,9 +34,9 @@
           %th Shipment (units)
           %th Growth
       %tbody
-        %tr
-          %td 0
-          %td 2015-09-18 00:00:00 UTC
-          %td 343
-          %td 192
-          %td +122.73%
+        %tr{ "ng-repeat" => "inventory in inventories" }
+          %td {{ inventory.quantity }}
+          %td {{ inventory.lcbo_updated_on }}
+          %td {{ inventory.sales }}
+          %td {{ inventory.shipment }}
+          %td
