@@ -6,19 +6,19 @@
 .row.text-center
   .col-xs-6.col-sm-2
     %h4 YTD Sales
-    %h1 3089
+    %h1 {{ dashboard.sales }}
   .col-xs-6.col-sm-3
     %h4 Current Inventory
-    %h1 1464
+    %h1 {{ dashboard.inventory }}
   .col-xs-6.col-sm-2
     %h4 YTD Shipments
-    %h1 1752
+    %h1 {{ dashboard.shipments }}
   .col-xs-6.col-sm-2
     %h4 Stores
-    %h1 125
+    %h1 {{ stores.length }}
   .col-xs-6.col-sm-3
     %h4 Last Updated
-    %h1 2015-09-18
+    %h1 {{ dashboard.last_updated_on }}
 %hr
 .row
   .col-xs-12
